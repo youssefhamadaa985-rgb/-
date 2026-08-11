@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>عيد ميلاد رحمة الـ 17 🎀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Marhey:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#FFFDF9;color:#2C2C2C}
+body{font-family:'Cairo',sans-serif;touch-action:manipulation;-webkit-tap-highlight-color:transparent;overflow-x:hidden}
+button{font:inherit}
+#app{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:8px 8px;position:relative;overflow-x:hidden;user-select:none}
+.font-marhey{font-family:'Marhey',cursive,sans-serif}
+.font-cairo{font-family:'Cairo',sans-serif}
+.header{position:fixed;top:0;left:0;right:0;z-index:40;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;pointer-events:none;max-width:576px;margin:auto}
+.audio-btn,.progress{pointer-events:auto;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:2px solid #2C2C2C;box-shadow:2px 3px 0 #2C2C2C}
+.audio-btn{position:fixed;top:16px;left:16px;z-index:50;padding:10px 12px;border-radius:9999px;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;cursor:pointer;color:#334155;transition:.15s}
+.audio-btn:hover{transform:scale(1.05)} .audio-btn:active{transform:scale(.95)}
+.progress{padding:6px 14px;border-radius:9999px;font-family:'Marhey';font-weight:700;font-size:12px;color:#db2777;display:flex;gap:6px;align-items:center}
+main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 0 24px;z-index:10;width:100%;max-width:448px;margin:auto}
+footer{text-align:center;font-size:12px;font-family:'Marhey';color:#94a3b8;padding:8px;position:relative;z-index:10}
+.scene{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:82vh;padding:16px;text-align:center;position:relative;z-index:10;max-width:448px;margin:auto;animation:sceneIn .4s ease both}
+.scene.wide{max-width:512px;min-height:85vh}
+@keyframes sceneIn{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:none}}
+.character{width:224px;height:224px;display:flex;align-items:center;justify-content:center;animation:charIn .55s cubic-bezier(.175,.885,.32,1.275) both;filter:drop-shadow(0 4px 4px rgba(0,0,0,.12))}
+.character svg{width:100%;height:100%;overflow:visible}
+@keyframes charIn{from{opacity:0;transform:translateY(10px) scale(.9)}to{opacity:1;transform:none}}
+.doodle-card{background:rgba(255,255,255,.95);border:3.5px solid #2C2C2C;border-radius:24px;box-shadow:4px 6px 0 #2C2C2C;width:100%;padding:24px;margin-bottom:24px;backdrop-filter:blur(8px)}
+.doodle-card h1,.doodle-card h2,.doodle-card p{margin-top:0}
+.doodle-btn{border:3.5px solid #2C2C2C;border-radius:9999px;box-shadow:3px 5px 0 #2C2C2C;transition:all .15s cubic-bezier(.175,.885,.32,1.275);cursor:pointer;font-family:'Marhey';font-weight:700}
+.doodle-btn:active{transform:translateY(3px) translateX(2px);box-shadow:1px 2px 0 #2C2C2C}
+.btn{padding:14px 32px;font-size:18px;width:100%;max-width:320px}
+.pink{background:#FF85A1;color:#fff}.pink:hover{background:#FF6B8B}
+.yellow{background:#FFF3B0;color:#1f2937}.yellow:hover{background:#FFE875}
+.green{background:#C7F9CC;color:#1f2937}.green:hover{background:#A1F0AD}
+.text-pink{color:#db2777}.text-teal{color:#0f766e}.text-purple{color:#6b21a8}
+.small{font-size:16px}.medium{font-size:18px}.large{font-size:24px}.xl{font-size:30px}
+.bold{font-weight:700}.extrabold{font-weight:800}
+.leading{line-height:1.7}
+.space>*+*{margin-top:12px}
+.hidden{display:none!important}
+.choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;margin-bottom:16px}
+.choice{padding:12px 8px;font-size:15px}
+.pink-light{background:#fce7f3;color:#9d174d}.purple-light{background:#f3e8ff;color:#6b21a8}.amber-light{background:#fef3c7;color:#92400e}
+.selected-pink{background:#FF85A1;color:white;transform:scale(1.05)}
+.selected-purple{background:#E2D4F9;color:#581c87;transform:scale(1.05)}
+.selected-amber{background:#FFF3B0;color:#0f172a;transform:scale(1.05)}
+.bubble{margin-top:12px;padding:10px;background:#fdf2f8;border:2px solid #f9a8d4;border-radius:12px;font-family:'Marhey';font-weight:700;color:#be185d;font-size:18px}
+.advice-list{display:grid;gap:8px;text-align:right;font-weight:700;color:#334155;background:rgba(254,243,199,.6);padding:14px;border-radius:12px;border:1px solid #fde68a}
+.advice-item{display:flex;align-items:center;gap:8px;font-size:17px;animation:slideIn .45s ease both}
+@keyframes slideIn{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+#bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(48px);animation:pulseGlow 3s ease-in-out infinite}
+.orb1{width:288px;height:288px;top:-96px;left:-96px;background:rgba(251,207,232,.40)}
+.orb2{width:320px;height:320px;top:33%;right:-96px;background:rgba(216,180,254,.18);animation-delay:1.5s}
+.orb3{width:320px;height:320px;bottom:-80px;left:25%;background:rgba(253,230,138,.28);animation-delay:3s}
+@keyframes pulseGlow{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+.float{position:absolute;font-size:24px;opacity:.7;filter:drop-shadow(0 2px 2px rgba(0,0,0,.1));animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(-12px) rotate(-6deg) scale(var(--s))}50%{transform:translateY(12px) rotate(6deg) scale(calc(var(--s)*1.15))}}
+.animate-bounce{animation:bounce 1s infinite}.animate-pulse{animation:pulse 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(-5%)}50%{transform:none}}
+@keyframes pulse{50%{opacity:.65}}
+.animate-flame{animation:candleFlicker .6s ease-in-out infinite;transform-origin:bottom center}
+@keyframes candleFlicker{0%,100%{transform:scale(1) rotate(-1deg);opacity:.95}25%{transform:scale(1.15,.9) rotate(2deg);opacity:1}50%{transform:scale(.9,1.1) rotate(-2deg);opacity:.85}75%{transform:scale(1.05) rotate(1deg);opacity:.98}}
+.replay-lines p{margin:0 0 3px}
+.final-title{font-size:28px;font-family:'Marhey';font-weight:800;color:#FF85A1;line-height:1.25;letter-spacing:.5px}
+.final-sub{font-size:19px;font-family:'Marhey';font-weight:700;color:#6b21a8;margin-top:4px}
+.final-card{text-align:right;padding:24px 24px 20px}
+.final-card p{font-size:16px;line-height:1.8;font-weight:700;margin:0 0 3px}
+.final-card .closing{color:#db2777;font-family:'Marhey';font-weight:800;font-size:19px;text-align:center;padding-top:8px}
+.closing-note{margin-top:24px;padding-top:16px;border-top:2px dashed #fbcfe8;text-align:center;color:#db2777;font-family:'Marhey';font-weight:700;font-size:17px;line-height:1.7}
+.cake-badge{position:absolute;top:-8px;right:-8px;background:#fce7f3;border:2px solid #2C2C2C;color:#db2777;padding:4px 12px;border-radius:9999px;font-family:'Marhey';font-weight:700;font-size:14px;box-shadow:2px 2px 0 #2C2C2C}
+@media(max-width:480px){.character{width:224px;height:224px}.doodle-card{padding:20px}.xl{font-size:25px}.final-title{font-size:24px}.final-sub{font-size:17px}.audio-btn{left:12px;top:12px}.progress{font-size:11px;padding:6px 10px}.choice{font-size:13px}}
+@media(min-width:640px){.character{width:256px;height:256px}.final-title{font-size:36px}.final-sub{font-size:24px}.small{font-size:18px}.medium{font-size:20px}}
+</style>
+</head>
+<body>
+<div id="bg">
+  <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+  <div class="float" style="left:8%;top:12%;--s:1.1;animation-duration:6s;animation-delay:0s">💖</div>
+  <div class="float" style="left:85%;top:15%;--s:.9;animation-duration:5s;animation-delay:1s">✨</div>
+  <div class="float" style="left:15%;top:75%;--s:1.2;animation-duration:7s;animation-delay:2s">🌸</div>
+  <div class="float" style="left:88%;top:80%;--s:.8;animation-duration:4.5s;animation-delay:.5s">⭐</div>
+  <div class="float" style="left:5%;top:45%;--s:1;animation-duration:6.5s;animation-delay:1.5s">🎀</div>
+  <div class="float" style="left:92%;top:48%;--s:.9;animation-duration:5.5s;animation-delay:2.5s">💖</div>
+  <div class="float" style="left:48%;top:8%;--s:1.1;animation-duration:4s;animation-delay:1.2s">✨</div>
+  <div class="float" style="left:80%;top:30%;--s:1;animation-duration:6.2s;animation-delay:.8s">🎈</div>
+  <div class="float" style="left:20%;top:25%;--s:.85;animation-duration:5.8s;animation-delay:1.8s">💕</div>
+</div>
+
+<div id="app">
+<header class="header">
+  <button id="audioBtn" class="audio-btn" aria-label="كتم الصوت">🔊 <span id="audioText">موسيقى كيوت 🎵</span></button>
+  <div class="progress"><span id="progressText">مرحلة 1 من 8</span><span>🎀</span></div>
+</header>
+<main id="main"></main>
+<footer>صنع بحب لـ رحومتي 💖 21/8/2009</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+<script>
+const VARIANTS = {"gift": "<g>\n            \n            <path d=\"M 125 110 Q 132 103 138 110\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 162 110 Q 168 103 175 110\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 135 125 Q 150 138 165 125\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 105 160 Q 120 180 130 185\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 195 160 Q 180 180 170 185\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <rect x=\"120\" y=\"170\" width=\"60\" height=\"50\" rx=\"8\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" />\n            <rect x=\"115\" y=\"165\" width=\"70\" height=\"12\" rx=\"4\" fill=\"#FFB6C1\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            \n            <line x1=\"150\" y1=\"165\" x2=\"150\" y2=\"220\" stroke=\"#FFF3B0\" stroke-width=\"6\" />\n            \n            <path d=\"M 138 158 C 130 150, 145 145, 150 160 C 155 145, 170 150, 162 158 Z\" fill=\"#FFF3B0\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <path d=\"M 85 90 C 85 80, 70 80, 70 92 C 70 102, 85 112, 85 112 C 85 112, 100 102, 100 92 C 100 80, 85 80, 85 90 Z\" fill=\"#FF85A1\" opacity=\"0.9\" />\n            <path d=\"M 215 95 C 215 87, 202 87, 202 96 C 202 104, 215 112, 215 112 C 215 112, 228 104, 228 96 C 228 87, 215 87, 215 95 Z\" fill=\"#E2D4F9\" opacity=\"0.9\" />\n          </g>\n        ", "party": "<g>\n            \n            <path d=\"M 130 72 L 150 15 L 170 72 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" stroke-linejoin=\"round\" />\n            <line x1=\"135\" y1=\"55\" x2=\"165\" y2=\"55\" stroke=\"#FFF3B0\" stroke-width=\"5\" />\n            <line x1=\"140\" y1=\"38\" x2=\"160\" y2=\"38\" stroke=\"#BEE9E8\" stroke-width=\"5\" />\n            <polygon points=\"150,5 154,12 161,13 156,18 157,25 150,21 143,25 144,18 139,13 146,12\" fill=\"#FFE45E\" stroke=\"#2C2C2C\" stroke-width=\"2.5\" />\n\n            \n            <circle cx=\"132\" cy=\"108\" r=\"4.5\" fill=\"#2C2C2C\" />\n            <circle cx=\"168\" cy=\"108\" r=\"4.5\" fill=\"#2C2C2C\" />\n\n            \n            <path d=\"M 140 122 Q 150 135 160 122\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 100 150 Q 80 130 75 115\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 200 150 Q 220 130 225 115\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <text x=\"230\" y=\"100\" font-size=\"28\" font-weight=\"bold\" fill=\"#FF85A1\">👀</text>\n          </g>\n        ", "cake": "<g>\n            \n            <path d=\"M 132 72 L 150 18 L 168 72 Z\" fill=\"#E2D4F9\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" stroke-linejoin=\"round\" />\n            <path d=\"M 138 52 C 145 50, 155 54, 162 52\" stroke=\"#FF85A1\" stroke-width=\"4\" fill=\"none\" />\n            <circle cx=\"150\" cy=\"14\" r=\"7\" fill=\"#FFF3B0\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <circle cx=\"132\" cy=\"108\" r=\"5\" fill=\"#2C2C2C\" />\n            <circle cx=\"168\" cy=\"108\" r=\"5\" fill=\"#2C2C2C\" />\n            <circle cx=\"134\" cy=\"106\" r=\"1.5\" fill=\"#FFFFFF\" />\n            <circle cx=\"170\" cy=\"106\" r=\"1.5\" fill=\"#FFFFFF\" />\n\n            \n            <path d=\"M 138 123 Q 150 136 162 123\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 100 160 L 60 150 L 50 190\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            \n            <path d=\"M 30 130 Q 30 70 55 70 Q 80 70 80 130 Q 80 150 55 150 Q 30 150 30 130 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" />\n            <path d=\"M 55 150 L 55 190\" stroke=\"#2C2C2C\" stroke-width=\"3\" fill=\"none\" />\n            <ellipse cx=\"45\" cy=\"95\" rx=\"5\" ry=\"12\" fill=\"#FFFFFF\" opacity=\"0.6\" transform=\"rotate(-20 45 95)\" />\n\n            \n            <path d=\"M 195 160 Q 215 175 240 175\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <ellipse cx=\"230\" cy=\"180\" rx=\"45\" ry=\"8\" fill=\"#D2D6DC\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n\n            \n            <rect x=\"195\" y=\"145\" width=\"70\" height=\"32\" rx=\"6\" fill=\"#FFF3B0\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            \n            <path d=\"M 195 145 Q 205 158 215 145 Q 225 158 235 145 Q 245 158 255 145 Q 265 158 265 145 L 265 135 L 195 135 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <text x=\"217\" y=\"167\" font-size=\"16\" font-weight=\"bold\" font-family=\"sans-serif\" fill=\"#2C2C2C\">17</text>\n\n            \n            <rect x=\"226\" y=\"115\" width=\"8\" height=\"20\" fill=\"#FFFFFF\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n            \n            <line x1=\"230\" y1=\"115\" x2=\"230\" y2=\"108\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <g class=\"animate-flame\">\n<path d=\"M 230 108 Q 222 96 230 88 Q 238 96 230 108 Z\" fill=\"#FFB703\" stroke=\"#2C2C2C\" stroke-width=\"2\"/>\n<path d=\"M 230 105 Q 226 98 230 92 Q 234 98 230 105 Z\" fill=\"#FF0000\"/>\n</g>\n          </g>\n        ", "confused": "<g>\n            \n            <text x=\"210\" y=\"80\" font-size=\"42\" font-weight=\"900\" fill=\"#FF85A1\" class=\"animate-bounce\">؟</text>\n\n            \n            <circle cx=\"130\" cy=\"110\" r=\"6\" fill=\"#2C2C2C\" />\n            \n            <path d=\"M 165 104 L 175 114 M 175 104 L 165 114\" stroke=\"#2C2C2C\" stroke-width=\"4\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 135 130 Q 145 120 155 130 Q 165 140 170 128\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 195 160 Q 215 130 185 85\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 105 160 Q 90 180 85 200\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n          </g>\n        ", "blushing_hearts": "<g>\n            \n            <path d=\"M 132 72 L 150 18 L 168 72 Z\" fill=\"#BEE9E8\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" stroke-linejoin=\"round\" />\n            <line x1=\"135\" y1=\"52\" x2=\"165\" y2=\"52\" stroke=\"#FF85A1\" stroke-width=\"4\" />\n            <line x1=\"140\" y1=\"36\" x2=\"160\" y2=\"36\" stroke=\"#FFF3B0\" stroke-width=\"4\" />\n            <circle cx=\"150\" cy=\"14\" r=\"6\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <path d=\"M 124 108 Q 132 98 140 108\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 160 108 Q 168 98 176 108\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 138 122 Q 150 134 162 122\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 105 160 Q 120 185 140 170\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 195 160 Q 180 185 160 170\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            \n            <path d=\"M 150 175 C 142 162, 128 168, 138 182 L 150 192 L 162 182 C 172 168, 158 162, 150 175 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <path d=\"M 75 110 C 75 98, 60 98, 60 110 C 60 122, 75 132, 75 132 C 75 132, 90 122, 90 110 C 90 98, 75 98, 75 110 Z\" fill=\"#FF85A1\" class=\"animate-bounce\" />\n            <path d=\"M 225 110 C 225 98, 210 98, 210 110 C 210 122, 225 132, 225 132 C 225 132, 240 122, 240 110 C 240 98, 225 98, 225 110 Z\" fill=\"#FF85A1\" class=\"animate-bounce\" style=\"animation-delay:0.2s\" />\n          </g>\n        ", "shocked": "<g>\n            \n            <circle cx=\"130\" cy=\"106\" r=\"10\" fill=\"#FFFFFF\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <circle cx=\"130\" cy=\"106\" r=\"4\" fill=\"#2C2C2C\" />\n\n            <circle cx=\"170\" cy=\"106\" r=\"10\" fill=\"#FFFFFF\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <circle cx=\"170\" cy=\"106\" r=\"4\" fill=\"#2C2C2C\" />\n\n            \n            <ellipse cx=\"150\" cy=\"130\" rx=\"8\" ry=\"12\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n\n            \n            <path d=\"M 105 160 Q 110 125 115 120\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 195 160 Q 190 125 185 120\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <line x1=\"90\" y1=\"80\" x2=\"75\" y2=\"70\" stroke=\"#FF85A1\" stroke-width=\"4\" stroke-linecap=\"round\" />\n            <line x1=\"210\" y1=\"80\" x2=\"225\" y2=\"70\" stroke=\"#FF85A1\" stroke-width=\"4\" stroke-linecap=\"round\" />\n            <line x1=\"150\" y1=\"55\" x2=\"150\" y2=\"40\" stroke=\"#FF85A1\" stroke-width=\"4\" stroke-linecap=\"round\" />\n          </g>\n        ", "mustache_uncle": "<g>\n            \n            <path d=\"M 110 75 Q 150 55 190 75 L 205 85 L 95 85 Z\" fill=\"#6C757D\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" />\n            <line x1=\"90\" y1=\"85\" x2=\"210\" y2=\"85\" stroke=\"#2C2C2C\" stroke-width=\"5\" stroke-linecap=\"round\" />\n\n            \n            <line x1=\"122\" y1=\"102\" x2=\"138\" y2=\"102\" stroke=\"#2C2C2C\" stroke-width=\"5\" stroke-linecap=\"round\" />\n            <line x1=\"162\" y1=\"102\" x2=\"178\" y2=\"102\" stroke=\"#2C2C2C\" stroke-width=\"5\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 150 122 C 135 112, 110 120, 115 130 C 120 138, 140 128, 150 125 C 160 128, 180 138, 185 130 C 190 120, 165 112, 150 122 Z\" fill=\"#2C2C2C\" />\n\n            \n            <path d=\"M 105 160 L 195 160\" stroke=\"#2C2C2C\" stroke-width=\"6\" stroke-linecap=\"round\" />\n          </g>\n        ", "holding_heart": "<g>\n            \n            <path d=\"M 125 106 Q 132 100 138 106\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 162 106 Q 168 100 175 106\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 140 120 Q 150 128 160 120\" stroke=\"#2C2C2C\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 105 160 Q 125 165 135 165\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" fill-rule=\"evenodd\" />\n            <path d=\"M 195 160 Q 175 165 165 165\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" fill-rule=\"evenodd\" />\n\n            \n            <path d=\"M 150 145 C 130 125, 105 140, 125 165 L 150 190 L 175 165 C 195 140, 170 125, 150 145 Z\" fill=\"#E63946\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <path d=\"M 132 145 C 130 148, 132 153, 138 153\" stroke=\"#FFFFFF\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" />\n          </g>\n        ", "advice_book": "<g>\n            \n            <circle cx=\"132\" cy=\"108\" r=\"12\" fill=\"none\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <circle cx=\"168\" cy=\"108\" r=\"12\" fill=\"none\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <line x1=\"144\" y1=\"108\" x2=\"156\" y2=\"108\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n\n            \n            <path d=\"M 140 126 Q 150 134 160 126\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 105 160 Q 120 175 125 175\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" />\n            <path d=\"M 195 160 Q 180 175 175 175\" stroke=\"#2C2C2C\" stroke-width=\"5\" fill=\"none\" />\n\n            \n            <path d=\"M 110 160 L 150 170 L 190 160 L 190 200 L 150 210 L 110 200 Z\" fill=\"#FFF3B0\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" />\n            <line x1=\"150\" y1=\"170\" x2=\"150\" y2=\"210\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            \n            <line x1=\"120\" y1=\"175\" x2=\"142\" y2=\"180\" stroke=\"#2C2C2C\" stroke-width=\"3\" stroke-linecap=\"round\" />\n            <line x1=\"120\" y1=\"188\" x2=\"142\" y2=\"193\" stroke=\"#2C2C2C\" stroke-width=\"3\" stroke-linecap=\"round\" />\n            <line x1=\"158\" y1=\"180\" x2=\"180\" y2=\"175\" stroke=\"#2C2C2C\" stroke-width=\"3\" stroke-linecap=\"round\" />\n            <line x1=\"158\" y1=\"193\" x2=\"180\" y2=\"188\" stroke=\"#2C2C2C\" stroke-width=\"3\" stroke-linecap=\"round\" />\n          </g>\n        ", "tangerine": "<g class=\"animate-bounce\">\n            \n            <circle cx=\"150\" cy=\"160\" r=\"75\" fill=\"#FF8C00\" stroke=\"#2C2C2C\" stroke-width=\"5\" />\n            \n            <circle cx=\"120\" cy=\"130\" r=\"2\" fill=\"#FFA500\" />\n            <circle cx=\"180\" cy=\"140\" r=\"2\" fill=\"#FFA500\" />\n            <circle cx=\"140\" cy=\"190\" r=\"2\" fill=\"#FFA500\" />\n            <circle cx=\"165\" cy=\"200\" r=\"2\" fill=\"#FFA500\" />\n\n            \n            <path d=\"M 150 85 Q 175 60 190 75 Q 165 100 150 85 Z\" fill=\"#2A9D8F\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n            <path d=\"M 150 85 Q 130 65 120 78 Q 140 95 150 85 Z\" fill=\"#2A9D8F\" stroke=\"#2C2C2C\" stroke-width=\"3.5\" />\n\n            \n            <circle cx=\"128\" cy=\"150\" r=\"6\" fill=\"#2C2C2C\" />\n            <circle cx=\"172\" cy=\"150\" r=\"6\" fill=\"#2C2C2C\" />\n            <circle cx=\"130\" cy=\"148\" r=\"2\" fill=\"#FFFFFF\" />\n            <circle cx=\"174\" cy=\"148\" r=\"2\" fill=\"#FFFFFF\" />\n\n            \n            <path d=\"M 135 168 Q 150 185 165 168\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 144 174 Q 150 185 156 174\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"2\" />\n\n            \n            <ellipse cx=\"115\" cy=\"162\" rx=\"8\" ry=\"5\" fill=\"#FFB6C1\" opacity=\"0.8\" />\n            <ellipse cx=\"185\" cy=\"162\" rx=\"8\" ry=\"5\" fill=\"#FFB6C1\" opacity=\"0.8\" />\n          </g>\n        ", "doctor": "<g>\n            \n            <path d=\"M 100 180 L 125 150 L 150 185 L 175 150 L 200 180 L 200 280 L 100 280 Z\" fill=\"#F8F9FA\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" />\n\n            \n            <path d=\"M 125 150 Q 110 180 135 210 Q 150 225 165 210 Q 190 180 175 150\" stroke=\"#2A9D8F\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\" />\n            \n            <circle cx=\"150\" cy=\"225\" r=\"9\" fill=\"#D2D6DC\" stroke=\"#2C2C2C\" stroke-width=\"3\" />\n\n            \n            <circle cx=\"132\" cy=\"108\" r=\"5\" fill=\"#2C2C2C\" />\n            <circle cx=\"168\" cy=\"108\" r=\"5\" fill=\"#2C2C2C\" />\n            <circle cx=\"134\" cy=\"106\" r=\"1.5\" fill=\"#FFFFFF\" />\n            <circle cx=\"170\" cy=\"106\" r=\"1.5\" fill=\"#FFFFFF\" />\n\n            \n            <path d=\"M 136 122 Q 150 136 164 122\" stroke=\"#2C2C2C\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <text x=\"70\" y=\"90\" font-size=\"24\">✨</text>\n            <text x=\"210\" y=\"90\" font-size=\"24\">🩺</text>\n          </g>\n        ", "celebration": "<g>\n            \n            <path d=\"M 130 72 L 150 12 L 170 72 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" stroke-linejoin=\"round\" />\n            <line x1=\"135\" y1=\"52\" x2=\"165\" y2=\"52\" stroke=\"#FFF3B0\" stroke-width=\"4\" />\n            <line x1=\"140\" y1=\"35\" x2=\"160\" y2=\"35\" stroke=\"#BEE9E8\" stroke-width=\"4\" />\n            <polygon points=\"150,2 153,8 160,9 155,14 156,20 150,17 144,20 145,14 140,9 147,8\" fill=\"#FFE45E\" stroke=\"#2C2C2C\" stroke-width=\"2.5\" />\n\n            \n            <path d=\"M 125 108 Q 132 98 140 108\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 160 108 Q 168 98 176 108\" stroke=\"#2C2C2C\" stroke-width=\"4.5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <path d=\"M 132 120 Q 150 142 168 120 Z\" fill=\"#FF85A1\" stroke=\"#2C2C2C\" stroke-width=\"4\" />\n\n            \n            <path d=\"M 100 150 Q 75 110 65 95\" stroke=\"#2C2C2C\" stroke-width=\"5.5\" fill=\"none\" stroke-linecap=\"round\" />\n            <path d=\"M 200 150 Q 225 110 235 95\" stroke=\"#2C2C2C\" stroke-width=\"5.5\" fill=\"none\" stroke-linecap=\"round\" />\n\n            \n            <text x=\"45\" y=\"80\" font-size=\"32\">🎈</text>\n            <text x=\"225\" y=\"80\" font-size=\"32\">🎉</text>\n          </g>\n        "};
+
+function flork(variant, candlesLit=true){
+  const base = variant !== 'tangerine' ? `<g>
+<path d="M 100 280 L 100 130 C 100 70, 200 70, 200 130 L 200 280" fill="#FFFFFF" stroke="#2C2C2C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="120" cy="120" rx="9" ry="6" fill="#FFB6C1" opacity="0.8"/>
+<ellipse cx="180" cy="120" rx="9" ry="6" fill="#FFB6C1" opacity="0.8"/>
+</g>` : '';
+  const body = VARIANTS[variant] || VARIANTS.gift;
+  return `<div class="character"><svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${base}${body}</svg></div>`;
+}
+
+const sound = (() => {
+  let ctx=null, muted=false, bgm=false, timer=null;
+  function init(){try{if(!ctx){const C=window.AudioContext||window.webkitAudioContext;ctx=new C()} if(ctx.state==='suspended')ctx.resume()}catch(e){}}
+  function toggle(){muted=!muted;if(muted)stop();else start();return muted}
+  function pop(){if(muted)return;try{init();if(!ctx)return;const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime;o.type='sine';o.frequency.setValueAtTime(400,t);o.frequency.exponentialRampToValueAtTime(800,t+.08);g.gain.setValueAtTime(.3,t);g.gain.exponentialRampToValueAtTime(.01,t+.08);o.connect(g);g.connect(ctx.destination);o.start();o.stop(t+.08)}catch(e){}}
+  function chime(){if(muted)return;try{init();if(!ctx)return;[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+i*.06;o.type='triangle';o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.2,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+.35)})}catch(e){}}
+  function confettiSound(){if(muted)return;for(let i=0;i<5;i++)setTimeout(pop,i*40)}
+  function start(){if(muted||bgm)return;try{init();if(!ctx)return;bgm=true;const melody=[[261.63,.3],[261.63,.3],[293.66,.6],[261.63,.6],[349.23,.6],[329.63,1],[261.63,.3],[261.63,.3],[293.66,.6],[261.63,.6],[392,.6],[349.23,1],[261.63,.3],[261.63,.3],[523.25,.6],[440,.6],[349.23,.6],[329.63,.6],[293.66,.8]];let step=0;const play=()=>{if(!bgm||!ctx||muted)return;const [f,d]=melody[step],o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime;o.type='sine';o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.06,t+.05);g.gain.exponentialRampToValueAtTime(.001,t+d*.9);o.connect(g);g.connect(ctx.destination);o.start();o.stop(t+d);step=(step+1)%melody.length;timer=setTimeout(play,d*1000+150)};play()}catch(e){}}
+  function stop(){bgm=false;if(timer!==null){clearTimeout(timer);timer=null}}
+  return {toggle,start,stop,pop,chime,confettiSound,getMuted:()=>muted};
+})();
+
+function fireConfetti(opts){ if(typeof confetti==='function') confetti(opts); }
+function nextScene(){sound.start(); if(scene<8){scene++;window.scrollTo({top:0,behavior:'smooth'});render()}}
+let scene=1, scene2Step=1, scene4Selected=null, scene4Variant='confused', showTangerine=false, candlesLit=false, replay=0;
+
+function sceneWrap(content, cls=''){return `<div class="scene ${cls}">${content}</div>`}
+
+function render(){
+ document.getElementById('progressText').textContent=`مرحلة ${scene} من 8`;
+ let html='';
+ if(scene===1) html=scene1();
+ if(scene===2) html=scene2();
+ if(scene===3) html=scene3();
+ if(scene===4) html=scene4();
+ if(scene===5) html=scene5();
+ if(scene===6) html=scene6();
+ if(scene===7) html=scene7();
+ if(scene===8) html=scene8();
+ document.getElementById('main').innerHTML=html;
+ if(scene===3 && !candlesLit){setTimeout(()=>{candlesLit=true;sound.chime();render()},600)}
+ if(scene===8){setTimeout(grandConfetti,800)}
+}
+
+function scene1(){
+ return sceneWrap(
+   flork('gift')+
+   `<div class="doodle-card">
+      <h2 class="large font-marhey text-pink bold leading">"استنيييي بس يا رحومتي 👀🎀"</h2>
+      <p class="medium font-cairo bold leading">"أنا محضرلك حاجة صغيرة كدا... 😂🎁"</p>
+    </div>
+    <button class="doodle-btn btn pink" onclick="openGift()">افتحي الهدية 🎁</button>`
+ );
+}
+function openGift(){sound.chime();sound.confettiSound();fireConfetti({particleCount:50,spread:60,origin:{y:.7},colors:['#FF85A1','#FFB6C1','#FFF3B0','#E2D4F9']});nextScene()}
+
+function scene2(){
+ let card='';
+ if(scene2Step===1)card=`<div class="space"><h2 class="large font-marhey bold">"بصي بقا..."</h2><p class="medium font-cairo bold text-pink">"قبل أي حاجة، عندي سؤال مهم جدًا 👀"</p></div>`;
+ if(scene2Step===2)card=`<div class="space"><p class="xl font-marhey bold text-pink leading">"إنتي عارفة النهارده كام؟ 👀🎀"</p></div>`;
+ if(scene2Step===3)card=`<div class="space"><h2 class="large font-marhey bold text-pink">"أيووووه 😂🎀"</h2><p class="medium font-cairo bold">"جايبلك كيكههه   ."</p></div>`;
+ let button=scene2Step===1?`<button class="doodle-btn btn yellow" onclick="scene2Step=2;sound.pop();render()">إيه هو؟ 😂</button>`:
+ scene2Step===2?`<button class="doodle-btn btn pink animate-bounce" onclick="scene2Step=3;sound.chime();sound.confettiSound();fireConfetti({particleCount:60,spread:70,origin:{y:.65},colors:['#FF85A1','#BEE9E8','#FFF3B0','#FFB6C1']});render()">21/8 ؟ 🎀</button>`:
+ `<button class="doodle-btn btn green" onclick="sound.pop();nextScene()">وريني كدااا 😂🎀</button>`;
+ return sceneWrap(flork(scene2Step===3?'blushing_hearts':'party')+`<div class="doodle-card" style="min-height:140px;display:flex;align-items:center;justify-content:center">${card}</div>${button}`);
+}
+function scene3(){
+ return sceneWrap(`<div style="position:relative">${flork('cake',candlesLit)}<div class="cake-badge">17 سنة! 🎂</div></div>
+ <div class="doodle-card space"><h2 class="large font-marhey bold text-pink leading">"يعني رسميًا... الكتكوتة بتاعتي كبرت سنة 😭🎀"</h2><p class="medium font-cairo bold leading">"أحلى من تم الـ 17 سنة يعم والله 😂❤️"</p></div>
+ <button class="doodle-btn btn pink" onclick="sound.pop();nextScene()">كملييي 🎀</button>`);
+}
+function scene4(){
+ let selectedClass = scene4Selected==='رحومتي 🎀'?'selected-pink':scene4Selected==='ماما 😂'?'selected-purple':scene4Selected==='عم فتحي 😂'?'selected-amber':'';
+ return sceneWrap(flork(scene4Variant)+`<div class="doodle-card space">
+ <h2 class="large font-marhey bold leading">"بس استني... 17 سنة؟! 😭"</h2>
+ <p class="medium font-cairo bold text-pink">"طب كدا أناديكي رحومتي ولا ماما ولا عم فتحي؟ 😂😂"</p>
+ ${scene4Selected?`<div class="bubble">"  اععععععع عم فتحيي اكيد  😂🎀"</div>`:''}
+ </div>
+ <div class="choice-grid">
+  <button class="doodle-btn choice ${scene4Selected==='رحومتي 🎀'?selectedClass:'pink-light'} font-marhey bold" onclick="selectNick('rahomty')">رحومتي 🎀</button>
+  <button class="doodle-btn choice ${scene4Selected==='ماما 😂'?selectedClass:'purple-light'} font-marhey bold" onclick="selectNick('mama')">ماما 😂</button>
+  <button class="doodle-btn choice ${scene4Selected==='عم فتحي 😂'?selectedClass:'amber-light'} font-marhey bold" onclick="selectNick('fathy')">عم فتحي 😂</button>
+ </div>
+ ${scene4Selected?`<button class="doodle-btn btn green" onclick="sound.pop();nextScene()">كملي يا ست الكل 👀</button>`:''}`);
+}
+function selectNick(n){
+ sound.pop();
+ if(n==='rahomty'){scene4Selected='رحومتي 🎀';scene4Variant='blushing_hearts';fireConfetti({particleCount:40,spread:50,origin:{y:.6},colors:['#FF85A1','#FFB6C1']})}
+ else if(n==='mama'){scene4Selected='ماما 😂';scene4Variant='shocked'}
+ else {scene4Selected='عم فتحي 😂';scene4Variant='mustache_uncle'}
+ render();
+}
+function scene5(){
+ return sceneWrap(flork('holding_heart')+`<div class="doodle-card space" style="border-color:#f472b6">
+ <p class="medium font-cairo bold" style="color:#64748b">"بجد بقا بعيدًا عن الهزار..."</p>
+ <h2 class="large font-marhey bold text-pink leading">"واحشني اوي يسطاا والله 🌍🌚"</h2>
+ </div>
+ <button class="doodle-btn btn pink" onclick="sound.chime();nextScene()">كمل ي فتحيي 👀</button>`);
+}
+function scene6(){
+ let targets=[['🎯','أهدافك'],['📚','مذاكرتك'],['🙏','صلاتك'],['❤️','نفسك'],['🌸','وكل حاجة كويسة']];
+ let list=targets.map((x,i)=>`<div class="advice-item" style="animation-delay:${.2+i*.15}s"><span style="font-size:22px">${x[0]}</span><span>${x[1]}</span></div>`).join('');
+ return sceneWrap(flork(showTangerine?'tangerine':'advice_book')+`<div class="doodle-card space">
+ <h2 class="large font-marhey bold leading">"عاوزك السنة دي تركزي جدًا علي دول 👇."</h2>
+ <div class="advice-list">${list}</div>
+ <div style="padding-top:8px;border-top:1px solid #fce7f3"><button style="border:0;background:none;color:#ea580c;font-family:Marhey;font-weight:700;font-size:17px;cursor:pointer" onclick="showTangerine=true;sound.pop();render()"></button></div>
+ </div>
+ <button class="doodle-btn btn yellow" onclick="sound.pop();nextScene()">آخر حاجة ❤️</button>`);
+}
+const rawLines=[
+"اعععععع 😭🎀 ،","الكتكوتـة بتاعتي كبرت سنـة ،","أحلى مـن تـم الـ 17 سنـة يعـم والله ،","هااااابـي بيرث دااااااي يجلبييييي ،","ويارب تكون سنـة كلها فرحة وتحقيق أحلام","",
+"بجد وحشاااني أوي والله","بس هنعمل إيـه بقاا ،","",
+"المهم عاوزك تركزي جدا على اهدافك","ومذاكرتك وصلاتك وكل حاجه كويسه","عاوزك تركزي فيها ،","",
+"وابعدي عن اي حد مش كويس","وملكيش دعوه بحاجه","ومتزعليش على حد ،","",
+"نفسك ثم نفسك ثم اليوسفييي بتاعك😂🎀 ،","",
+"خلي بالك من نفسك","عاوز اشوفك أكبر دكتوره في الدنيا بجدد 👀❤️ ،","",
+"بحبك كل سنة وانتي طيبة","يٓ قلب يوووصف 🎀،"
+];
+function scene7(){
+ return sceneWrap(flork('doctor')+`<div class="doodle-card space" style="border-color:#5eead4">
+ <p class="medium font-cairo bold" style="color:#64748b">"و انا ك يوصف..."</p>
+ <h2 class="large font-marhey bold text-teal leading">"عاوز أشوفك أكبر دكتورة في الدنيا 👀❤️"</h2>
+ <p class="medium font-cairo bold text-pink">"وصدقيني هتبقي قدها ❤️"</p>
+ </div>
+ <button class="doodle-btn btn pink animate-pulse" onclick="sound.chime();nextScene()">افتحي آخر حاجة 🎁</button>`);
+}
+function scene8(){
+ let lines=rawLines.map((line,i)=>line===''?`<div style="height:12px"></div>`:`<p class="${i>=21?'closing':''}" style="animation:slideIn .45s ease ${.6+i*.08}s both">${line}</p>`).join('');
+ return sceneWrap(`<div style="margin-bottom:8px;transform:scale(.95)">${flork('celebration')}</div>
+ <div style="margin-bottom:16px"><div class="final-title">🎀 HAPPY BIRTHDAY RAHMA 🎀</div><div class="final-sub">كل سنة وانتي طيبة يا قلب يووووسف 🎀</div></div>
+ <div class="doodle-card final-card">
+  <div class="replay-lines">${lines}</div>
+  <div class="closing-note">"خلصنااا ...<br>بس يوم عيد ميلادك هو أحلى حاجة حصلت السنهه ديي 🎀❤️"</div>
+ </div>
+ <button class="doodle-btn btn pink" onclick="replayAnimation()">لكيييي تباا 😂🎀</button>`, 'wide');
+}
+function grandConfetti(){
+ sound.chime();sound.confettiSound();
+ const end=Date.now()+2500;
+ (function frame(){fireConfetti({particleCount:5,angle:60,spread:55,origin:{x:0},colors:['#FF85A1','#FFB6C1','#FFF3B0','#E2D4F9','#BEE9E8']});fireConfetti({particleCount:5,angle:120,spread:55,origin:{x:1},colors:['#FF85A1','#FFB6C1','#FFF3B0','#E2D4F9','#BEE9E8']});if(Date.now()<end)requestAnimationFrame(frame)})();
+}
+function replayAnimation(){render()}
+document.getElementById('audioBtn').addEventListener('click',()=>{
+ const m=sound.toggle();document.getElementById('audioBtn').firstChild.textContent=m?'🔇 ':'🔊 ';document.getElementById('audioText').textContent=m?'الصوت مفيش':'موسيقى كيوت 🎵';document.getElementById('audioBtn').setAttribute('aria-label',m?'تشغيل الصوت':'كتم الصوت')
+});
+render();
+</script>
+</body>
+</html>
